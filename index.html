@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
+    <script src="js/script.js"></script>
     <header class="main-header">
         <!-- Logo -->
         <div class="logo-icon"></div>
@@ -85,29 +86,29 @@
             
             <section>
                 <!-- Form -->
-                <form class="message-form" onsubmit="return validateForm()">
-                    Nama: <input placeholder="Nama" type="text" name="full-name">
-                    <br>
+                <form name="message-form" onsubmit="return validateForm()">
+                    Nama: <input placeholder="Nama" type="text" name="full-name" />
+                    <br />
 
-                    Tanggal Lahir: <input type="date" name="birth-date">
-                    <br>
+                    Tanggal Lahir: <input type="date" name="birth-date" />
+                    <br />
 
                     Jenis Kelamin:
-                    <input type="radio" id="male" name="gender" value="Male" checked>
+                    <input type="radio" id="male" name="gender" value="Male"/>
                     <label for="male">Laki-laki</label>
-                    <input type="radio" id="female" name="gender" value="Female">
+                    <input type="radio" id="female" name="gender" value="Female" />
                     <label for="female">Perempuan</label>
-                    <br>
+                    <br />
 
                     Pesan: <textarea placeholder="Pesan" name="pesan"></textarea>
-                    <br>
+                    <br />
                     
                     <input type="submit" value="Submit" />
                 </form>
 
                 <!-- Result Form -->
-                <div class="result-message">
-                    <p>Curent Time:</p><br>
+                <div>
+                    <p>Curent Time:<span id="send-time"></span></p>
                     <p>Nama: <span id="send-fullname"></span></p>
                     <p>Tanggal Lahir: <span id="send-birthdate"></span></p>
                     <p>Jenis Kelamin: <span id="send-gender"></span></p>
