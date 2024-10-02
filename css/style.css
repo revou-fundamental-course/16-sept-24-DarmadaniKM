@@ -2,6 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid black;
+    padding: 16px 24px;
+
+}
+
+.main-section {
+    padding: 16px 24px;
+}
+
+.main-footer {
+    padding: 16px 24px;
 }
 
 nav {
@@ -13,6 +24,15 @@ nav > a {
     padding: 8px;
     color: black;
     text-decoration: none;
+}
+
+.nav-button>button {
+    float: left;
+    background-color: rgb(194, 191, 191);
+    border: none;
+}
+.nav-button>button:hover {
+    background-color: rgb(179, 177, 177);
 }
 
 .logo-icon {
@@ -52,5 +72,26 @@ nav > a {
 
 }
 
+.message-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.result-form {
+    border: 1px solid black;
+    padding: 15px 5px;
+    border-radius: 5px;
+    width: 50%
+}
+
+.pesan span{
+    vertical-align: top;
+}
+td {
+    vertical-align: top;
+}
+#submit {
+    width: 100%;
+}
 

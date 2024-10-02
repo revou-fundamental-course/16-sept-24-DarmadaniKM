@@ -7,27 +7,24 @@
     <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
-    <script src="js/script.js"></script>
     <header class="main-header">
         <!-- Logo -->
         <div class="logo-icon"></div>
 
         <!-- Navigation -->
-        <nav>
-            <a href="#section-home">Home</a>
-            <a href="#section-profile">Our Profile</a>
-            <a href="#section-portfolio">Portofolio</a>
-            <a href="#section-message">Message Us</a>
-        </nav>
+        <div class = "nav-button">
+            <button onclick="location.href='#section-home'">Home</button>
+            <button onclick="location.href='#section-profile'">Our Profile</button>
+            <button onclick="location.href='#section-portfolio'">Portofolio</button>
+            <button onclick="location.href='#section-message'">Message</button>
+        </div>
     </header>
-
-    <hr />
 
     <main>
         <!-- Home -->
-        <section id="section-home">
+        <section id="section-home" class="main-section">
             <header>
-                <h1>Hi User, Welcome to My Website</h1>
+                <h1>Hi <span id="welcome-name">User</span>, Welcome to My Website</h1>
             </header>
 
             <article>
@@ -42,7 +39,7 @@
         <hr>
 
         <!-- Our Profile -->
-        <section id="section-profile">
+        <section id="section-profile" class="main-section">
             <header>
                 <h1>Our Profile</h1>
             </header>
@@ -66,11 +63,10 @@
 
         </section>
 
-
         <hr />
 
         <!-- Portofolio -->
-        <section id="section-portfolio">
+        <section id="section-portfolio" class="main-section">
             <header>
                 <h1>Portofolio</h1>
             </header>
@@ -79,40 +75,57 @@
         <hr />
 
         <!-- Message Us -->
-        <section id="section-message">
+        <section id="section-message" class="main-section">
             <header>
                 <h1>Message Us</h1>
             </header>
             
-            <section>
+            <section class="message-container" class="main-section">
                 <!-- Form -->
                 <form name="message-form" onsubmit="return validateForm()">
-                    Nama: <input placeholder="Nama" type="text" name="full-name" />
-                    <br />
-
-                    Tanggal Lahir: <input type="date" name="birth-date" />
-                    <br />
-
-                    Jenis Kelamin:
-                    <input type="radio" id="male" name="gender" value="Male"/>
-                    <label for="male">Laki-laki</label>
-                    <input type="radio" id="female" name="gender" value="Female" />
-                    <label for="female">Perempuan</label>
-                    <br />
-
-                    Pesan: <textarea placeholder="Pesan" name="pesan"></textarea>
-                    <br />
-                    
-                    <input type="submit" value="Submit" />
+                    <table>
+                        <tr>
+                            <td>Name</td> 
+                            <td>:</td>
+                            <td><input placeholder="Name" type="text" name="full-name"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Birth Date</td> 
+                            <td>:</td>
+                            <td><input type="date" name="birth-date"></td>
+                            <td><p id="error-date"></p></td>
+                        </tr> 
+                        <tr>
+                            <td>Gender</td>
+                            <td>:</td>
+                            <td>
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Message</td>
+                            <td>:</td>
+                            <td><textarea placeholder="Type here" name="pesan"></textarea></td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">
+                                <input type="submit" id="submit" value="Submit">
+                            </th>
+                        </tr>
+                    </table>
                 </form>
 
                 <!-- Result Form -->
-                <div>
+                <div class="result-form">
                     <p>Curent Time:<span id="send-time"></span></p>
-                    <p>Nama: <span id="send-fullname"></span></p>
-                    <p>Tanggal Lahir: <span id="send-birthdate"></span></p>
-                    <p>Jenis Kelamin: <span id="send-gender"></span></p>
-                    <p>Pesan: <span id="send-pesan"></span></p>
+                    <p>Name: <span id="send-fullname"></span></p>
+                    <p>Birth Date: <span id="send-birthdate"></span></p>
+                    <p>Gender: <span id="send-gender"></span></p>
+                    <p>Message: <span id="send-pesan"></span></p>
                 </div>
             </section>
         </section>
@@ -121,5 +134,6 @@
     <hr />
 
     <footer class="main-footer">Created by Darmadani Kyat</footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
